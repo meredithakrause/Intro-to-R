@@ -1,0 +1,16 @@
+A<-matrix(1:100, nrow=6)
+B<-matrix(1:1000, nrow=6)
+t(A)
+t(B)
+X<-c(1:17)
+Y<-c(1:167)
+x<-matrix(X, ncol=1)
+y<-matrix(Y,ncol=1)
+A%*%x
+B%*%y
+A2<-matrix(runif(100, min=0, max=100), nrow=10)
+B2<-matrix(runif(900, min=0, max=1000),nrow=30)
+solve(A2)
+solve(B2)
+det(A2)
+det(B2)
