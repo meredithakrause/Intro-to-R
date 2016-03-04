@@ -1,0 +1,10 @@
+Students<-Dataset
+mean.grade <- ddply(Students, "Sex", summarise, mean.grade = mean(Grade))
+mean.age <- ddply(Students, "Sex", summarise, mean.age = mean(Age))
+write.table(mean.age, "Ages")
+write.table(mean.grade, "Grades")
+s<-grep("i", Students$Name)
+s.df<-Students [s,]
+s.mean.grade <- ddply(s.df, "Sex", summarise, mean.grade = mean(Grade))
+s.mean.age <- ddply(s.df, "Sex", summarize, mean.age = mean(Age))
+write.csv(s.df)
