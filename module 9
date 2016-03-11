@@ -1,0 +1,3 @@
+plot(Girth ~ Height, trees, pch = 4, xlab = "Height (ft)", ylab = "Girth (in)", main = "Girth and Height of Black Cherry Trees")
+ggplot(trees, aes(x = Height, y =Girth)) + geom_point(shape = 4) + geom_smooth(method = lm, se= FALSE) + ggtitle("Girth and Height of Black Cherry Trees") + xlab("Height (ft)") + ylab("Girth (in)")
+xyplot(Girth ~ Height, data = trees, main = "Girth and Height of Black Cherry Trees", ylab = "Girth (in)", xlab = "Height (ft)")
